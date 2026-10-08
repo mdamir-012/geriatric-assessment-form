@@ -1,32 +1,68 @@
 # Geriatric Care Assessment
 
-A one-page assessment form for a visiting nurse, built with React, TypeScript, Mantine, and Zod. The form uses the supplied Zod schema for field and cross-field validation; it uses invented sample data only.
+A one-page assessment form for a visiting nurse to enter geriatric care assessment details.
+
+Built with:
+
+* React
+* TypeScript
+* Mantine
+* Zod
 
 ## Run locally
 
-```sh
+```bash
 corepack yarn install
 corepack yarn dev
 ```
 
-Open the local URL printed by Vite. To run the checks, tests, and production build:
+Open the local URL shown by Vite.
 
-```sh
+## Run tests and build
+
+```bash
 corepack yarn test
 ```
 
-## Included
+This runs the configured typecheck, lint, formatting check, tests, and production build.
 
-- Ten assessment fields with validation on blur and submit.
-- A sample patient button and a simulated save with parsed values.
-- Schema boundary and rendered form tests.
+## Features
+
+* 10 assessment fields
+* Validation using the provided Zod schema
+* Cross-field validation for age, follow-up date, and medication review
+* Validation on blur and submit
+* Sample patient data button
+* Simulated save with loading state
+* Shows the parsed values after a successful save
+* Tests for schema validation and form submission
+
+## Sample data
+
+The application uses made-up sample patient data only.
+
+No real patient information is used.
 
 ## Deployment
 
-The app is configured for GitHub Pages at <https://mdamir-012.github.io/geriatric-assessment-form/>. Deployment runs from the `main` branch through GitHub Actions. The repository's Pages source must be set to **GitHub Actions**.
+Deployed application:
 
-## Scope and follow-up
+https://mdamir-012.github.io/geriatric-assessment-form/
 
-There is no backend or persistent storage; saving is simulated in the browser. Follow-up work would connect a suitable API and add the authentication and data-handling protections required for real patient information. Do not use real patient data in this demo.
+The application is deployed using GitHub Pages through GitHub Actions.
 
-Time spent: **Approximately 1 hour** based on the work recorded in this session. Adjust this to your actual total before submitting if you spent additional time outside this session.
+## Scope
+
+This assignment does not include a backend, authentication, or persistent storage. The save action is simulated in the browser.
+
+For a real application, the next step would be connecting the form to a backend API and adding the required authentication and data protection.
+
+## Time spent
+
+Approximately 1 hour 30 minutes.
+
+## Notes
+
+The validation rules are kept in the provided Zod schema and the form uses the schema resolver for validation.
+
+The project was kept within the scope of the assignment and no real patient data was used.
