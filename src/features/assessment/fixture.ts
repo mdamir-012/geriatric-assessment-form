@@ -1,3 +1,5 @@
+import type { Assessment } from './schema';
+
 export const sampleAssessment = {
   mrn: 'MRN-004821',
   patientName: 'Sushila Deshpande',
@@ -9,4 +11,4 @@ export const sampleAssessment = {
   pharmacistReviewRequested: false,
   followUpDate: '2026-09-04',
   consentObtained: true,
-};
+} satisfies Assessment;
