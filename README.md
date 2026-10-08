@@ -29,4 +29,4 @@ The app is configured for GitHub Pages at <https://mdamir-012.github.io/geriatri
 
 There is no backend or persistent storage; saving is simulated in the browser. Follow-up work would connect a suitable API and add the authentication and data-handling protections required for real patient information. Do not use real patient data in this demo.
 
-Time spent: **Please replace this with your honest total before submitting.**
+Time spent: **Approximately 1 hour** based on the work recorded in this session. Adjust this to your actual total before submitting if you spent additional time outside this session.
