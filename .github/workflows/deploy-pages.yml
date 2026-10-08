@@ -25,13 +25,12 @@ jobs:
         uses: actions/setup-node@v6
         with:
           node-version-file: .node-version
-          cache: yarn
       - name: Enable Corepack
         run: corepack enable
       - name: Install dependencies
-        run: yarn install --immutable
+        run: corepack yarn install --immutable
       - name: Run checks, tests, and production build
-        run: yarn test
+        run: corepack yarn test
       - name: Configure GitHub Pages
         uses: actions/configure-pages@v5
       - name: Upload site artifact
