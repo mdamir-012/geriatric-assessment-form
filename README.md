@@ -1,44 +1,32 @@
-# Mantine Vite template
+# Geriatric Care Assessment
 
-## Features
+A one-page assessment form for a visiting nurse, built with React, TypeScript, Mantine, and Zod. The form uses the supplied Zod schema for field and cross-field validation; it uses invented sample data only.
 
-This template comes with the following features:
+## Run locally
 
-- [PostCSS](https://postcss.org/) with [mantine-postcss-preset](https://mantine.dev/styles/postcss-preset)
-- [TypeScript](https://www.typescriptlang.org/)
-- [Storybook](https://storybook.js.org/)
-- [Vitest](https://vitest.dev/) setup with [React Testing Library](https://testing-library.com/docs/react-testing-library/intro)
-- [Vite+](https://viteplus.dev/) unified toolchain: Vite, Vitest, Oxlint and Oxfmt are run with `vp` and configured in `vite.config.mjs`
+```sh
+corepack yarn install
+corepack yarn dev
+```
 
-## Vite+ CLI
+Open the local URL printed by Vite. To run the checks, tests, and production build:
 
-The template works without any global installation: `vp` is installed as a dev dependency and all npm scripts use it.
+```sh
+corepack yarn test
+```
 
-Optionally, you can install the [global `vp` CLI](https://viteplus.dev/guide/global-cli).
-It automatically switches to the Node.js version pinned in `.node-version` and lets you run commands directly, for example `vp dev` or `vp check --fix` instead of `yarn vp check --fix`.
+## Included
 
-## npm scripts
+- Ten assessment fields with validation on blur and submit.
+- A sample patient button and a simulated save with parsed values.
+- Schema boundary and rendered form tests.
 
-## Build and dev scripts
+## Deployment
 
-- `dev` – start development server
-- `build` – build production version of the app
-- `build:analyze` – build the app and open bundle size visualization (`dist/stats.html`)
-- `preview` – locally preview production build
+The app is configured for GitHub Pages at <https://mdamir-012.github.io/geriatric-assessment-form/>. Deployment runs from the `main` branch through GitHub Actions. The repository's Pages source must be set to **GitHub Actions**.
 
-### Testing scripts
+## Scope and follow-up
 
-- `check` – checks formatting, lint rules and TypeScript types with `vp check`
-- `check:fix` – same as `check`, fixes formatting and auto-fixable lint errors
-- `typecheck` – checks TypeScript types
-- `lint` – runs oxlint and stylelint
-- `format:test` – checks files with oxfmt
-- `vitest` – runs vitest tests
-- `vitest:watch` – starts vitest watch
-- `test` – runs `check`, `stylelint`, `vitest` and `build` scripts
+There is no backend or persistent storage; saving is simulated in the browser. Follow-up work would connect a suitable API and add the authentication and data-handling protections required for real patient information. Do not use real patient data in this demo.
 
-### Other scripts
-
-- `storybook` – starts storybook dev server
-- `storybook:build` – build production storybook bundle to `storybook-static`
-- `format:write` – formats all files with oxfmt
+Time spent: **Please replace this with your honest total before submitting.**

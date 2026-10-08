@@ -4,6 +4,7 @@ import { visualizer } from 'rollup-plugin-visualizer';
 import { defineConfig, lazyPlugins } from 'vite-plus';
 
 export default defineConfig({
+  base: process.env.GITHUB_ACTIONS === 'true' ? '/geriatric-assessment-form/' : '/',
   fmt: {
     ...oxfmt,
     ignorePatterns: [
